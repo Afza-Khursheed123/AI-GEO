@@ -1,0 +1,27 @@
+test_application_retry_paths_bypass_gemini_errors (test_gemini.GeminiTests.test_application_retry_paths_bypass_gemini_errors) ... ok
+test_atomic_limit_under_concurrency (test_gemini.GeminiTests.test_atomic_limit_under_concurrency) ... ok
+test_blocked_text_still_reports_usage (test_gemini.GeminiTests.test_blocked_text_still_reports_usage) ... ok
+test_configurable_limit (test_gemini.GeminiTests.test_configurable_limit) ... ok
+test_factory_keeps_existing_providers (test_gemini.GeminiTests.test_factory_keeps_existing_providers) ... ok
+test_gemini_ui_and_secure_key_widget (test_gemini.GeminiTests.test_gemini_ui_and_secure_key_widget) ... 2026-10-25 20:24:15.353 WARNING streamlit.runtime.scriptrunner_utils.script_run_context: Thread 'MainThread': missing ScriptRunContext! This warning can be ignored when running in bare mode.
+FAIL
+test_langchain_pipeline_and_message_mapping (test_gemini.GeminiTests.test_langchain_pipeline_and_message_mapping) ... ok
+test_missing_metadata_is_unavailable (test_gemini.GeminiTests.test_missing_metadata_is_unavailable) ... ok
+test_quota_error_no_retry_no_secret_and_attempt_counted (test_gemini.GeminiTests.test_quota_error_no_retry_no_secret_and_attempt_counted) ... ok
+test_sdk_configuration_and_usage_metadata (test_gemini.GeminiTests.test_sdk_configuration_and_usage_metadata) ... ok
+test_ten_calls_then_block_before_api_across_instances (test_gemini.GeminiTests.test_ten_calls_then_block_before_api_across_instances) ... ok
+test_utc_day_rollover (test_gemini.GeminiTests.test_utc_day_rollover) ... ok
+
+======================================================================
+FAIL: test_gemini_ui_and_secure_key_widget (test_gemini.GeminiTests.test_gemini_ui_and_secure_key_widget)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "D:\7 sem\madcep\AIGEOTOOLS\tests\test_gemini.py", line 159, in test_gemini_ui_and_secure_key_widget
+    self.assertEqual(app.text_input(key='sb_gemini_api_key').proto.type, 'password')
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 1 != 'password'
+
+----------------------------------------------------------------------
+Ran 12 tests in 39.151s
+
+FAILED (failures=1)

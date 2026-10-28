@@ -1,0 +1,63 @@
+test_atomic_limit_under_concurrency (test_gemini.GeminiTests.test_atomic_limit_under_concurrency) ... ok
+test_blocked_text_still_reports_usage (test_gemini.GeminiTests.test_blocked_text_still_reports_usage) ... ok
+test_configurable_limit (test_gemini.GeminiTests.test_configurable_limit) ... ok
+test_factory_keeps_existing_providers (test_gemini.GeminiTests.test_factory_keeps_existing_providers) ... ok
+test_gemini_ui_and_secure_key_widget (test_gemini.GeminiTests.test_gemini_ui_and_secure_key_widget) ... 2026-10-25 20:29:27.679 WARNING streamlit.runtime.scriptrunner_utils.script_run_context: Thread 'MainThread': missing ScriptRunContext! This warning can be ignored when running in bare mode.
+2026-10-25 20:29:33.474 Thread 'MainThread': missing ScriptRunContext! This warning can be ignored when running in bare mode.
+ok
+test_keyword_quota_error_shown_without_fallback_request (test_gemini.GeminiTests.test_keyword_quota_error_shown_without_fallback_request) ... 2026-10-25 20:29:35.062 WARNING streamlit.runtime.scriptrunner_utils.script_run_context: Thread 'MainThread': missing ScriptRunContext! This warning can be ignored when running in bare mode.
+2026-10-25 20:29:35.538 Uncaught app execution
+Traceback (most recent call last):
+  File "D:\7 sem\madcep\.venv\Lib\site-packages\streamlit\runtime\scriptrunner\exec_code.py", line 136, in exec_func_with_error_handling
+    result = func()
+  File "D:\7 sem\madcep\.venv\Lib\site-packages\streamlit\runtime\scriptrunner\script_runner.py", line 924, in code_to_exec
+    exec(code, module.__dict__)  # noqa: S102
+    ~~~~^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\7 sem\madcep\AIGEOTOOLS\geo_tool.py", line 5, in <module>
+    from modules.data_storage import DataStorage
+  File "D:\7 sem\madcep\AIGEOTOOLS\modules\data_storage.py", line 11, in <module>
+    import pandas as pd
+  File "D:\7 sem\madcep\.venv\Lib\site-packages\pandas\__init__.py", line 31, in <module>
+    raise ImportError(
+        "Unable to import required dependencies:\n" + "\n".join(_missing_dependencies)
+    )
+ImportError: Unable to import required dependencies:
+numpy: cannot load module more than once per process
+ERROR
+test_langchain_pipeline_and_message_mapping (test_gemini.GeminiTests.test_langchain_pipeline_and_message_mapping) ... ok
+test_missing_metadata_is_unavailable (test_gemini.GeminiTests.test_missing_metadata_is_unavailable) ... ok
+test_quota_error_no_retry_no_secret_and_attempt_counted (test_gemini.GeminiTests.test_quota_error_no_retry_no_secret_and_attempt_counted) ... ok
+test_sdk_configuration_and_usage_metadata (test_gemini.GeminiTests.test_sdk_configuration_and_usage_metadata) ... ok
+test_ten_calls_then_block_before_api_across_instances (test_gemini.GeminiTests.test_ten_calls_then_block_before_api_across_instances) ... ok
+test_utc_day_rollover (test_gemini.GeminiTests.test_utc_day_rollover) ... ok
+
+======================================================================
+ERROR: test_keyword_quota_error_shown_without_fallback_request (test_gemini.GeminiTests.test_keyword_quota_error_shown_without_fallback_request)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "D:\7 sem\madcep\.venv\Lib\site-packages\streamlit\runtime\state\session_state.py", line 790, in __getitem__
+    base_value = self._getitem(widget_id, key)
+  File "D:\7 sem\madcep\.venv\Lib\site-packages\streamlit\runtime\state\session_state.py", line 843, in _getitem
+    raise KeyError
+KeyError
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\7 sem\madcep\AIGEOTOOLS\tests\test_gemini.py", line 157, in test_keyword_quota_error_shown_without_fallback_request
+    cfg = dict(app.session_state['cfg'])
+               ~~~~~~~~~~~~~~~~~^^^^^^^
+  File "D:\7 sem\madcep\.venv\Lib\site-packages\streamlit\testing\v1\app_test.py", line 187, in __getitem__
+    return self._state[key]
+           ~~~~~~~~~~~^^^^^
+  File "D:\7 sem\madcep\.venv\Lib\site-packages\streamlit\runtime\state\safe_session_state.py", line 123, in __getitem__
+    return self._state[key]
+           ~~~~~~~~~~~^^^^^
+  File "D:\7 sem\madcep\.venv\Lib\site-packages\streamlit\runtime\state\session_state.py", line 797, in __getitem__
+    raise KeyError(_missing_key_error_message(key))
+KeyError: 'st.session_state has no key "cfg". Did you forget to initialize it? More info: https://docs.streamlit.io/develop/concepts/architecture/session-state#initialization'
+
+----------------------------------------------------------------------
+Ran 12 tests in 11.072s
+
+FAILED (errors=1)

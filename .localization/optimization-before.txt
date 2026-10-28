@@ -1,0 +1,16 @@
+test_article_optimization_needs_only_generation_key_and_content (test_gemini.GeminiTests.test_article_optimization_needs_only_generation_key_and_content) ... 2026-10-25 21:44:46.183 WARNING streamlit.runtime.scriptrunner_utils.script_run_context: Thread 'MainThread': missing ScriptRunContext! This warning can be ignored when running in bare mode.
+FAIL
+
+======================================================================
+FAIL: test_article_optimization_needs_only_generation_key_and_content (test_gemini.GeminiTests.test_article_optimization_needs_only_generation_key_and_content)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "D:\7 sem\madcep\AIGEOTOOLS\tests\test_gemini.py", line 200, in test_article_optimization_needs_only_generation_key_and_content
+    self.assertFalse(any('No generation model is available' in e.value for e in app.caption))
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: True is not false
+
+----------------------------------------------------------------------
+Ran 1 test in 8.244s
+
+FAILED (failures=1)
